@@ -1,0 +1,23 @@
+{
+    "inputs": {
+        "host": {
+            "connectionName": "shared_office365_2",
+            "operationId": "OnNewEmailV3",
+            "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+        },
+        "parameters": {
+            "folderPath": "Inbox",
+            "to": "user@example.com",
+            "from": "external.reports@noreply.com",
+            "includeAttachments": false,
+            "subjectFilter": "@string('Report generated!')",
+            "importance": "Any",
+            "fetchOnlyWithAttachment": false
+        },
+        "authentication": "@parameters('$authentication')"
+    },
+    "metadata": {
+        "operationMetadataId": "43ef9a1a-6692-4e9d-b5d3-9bd03e493830"
+    },
+    "splitOn": "@triggerOutputs()?['body/value']"
+}

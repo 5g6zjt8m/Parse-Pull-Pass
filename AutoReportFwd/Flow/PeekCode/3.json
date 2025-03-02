@@ -1,0 +1,14 @@
+{
+    "inputs": {
+        "variables": [
+            {
+                "name": "Account number",
+                "type": "string",
+                "value": "@{substring(string(outputs('Html_to_text')?['body']), add(indexOf(string(outputs('Html_to_text')?['body']), 'Acct#'), 12), 8)}"
+            }
+        ]
+    },
+    "metadata": {
+        "operationMetadataId": "43ef9a1a-6692-4e9d-b5d3-9bd03e493830"
+    }
+}

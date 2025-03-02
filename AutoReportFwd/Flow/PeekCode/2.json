@@ -1,0 +1,16 @@
+{
+    "inputs": {
+        "host": {
+            "connectionName": "shared_conversionservice",
+            "operationId": "HtmlToText",
+            "apiId": "/providers/Microsoft.PowerApps/apis/shared_conversionservice"
+        },
+        "parameters": {
+            "Content": "<p>@{triggerOutputs()?['body/body']}</p>"
+        },
+        "authentication": "@parameters('$authentication')"
+    },
+    "metadata": {
+        "operationMetadataId": "43ef9a1a-6692-4e9d-b5d3-9bd03e493830"
+    }
+}
