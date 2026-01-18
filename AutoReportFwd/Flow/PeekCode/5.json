@@ -1,0 +1,18 @@
+{
+    "inputs": {
+        "host": {
+            "connectionName": "shared_office365_2",
+            "operationId": "MoveV2",
+            "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+        },
+        "parameters": {
+            "messageId": "@triggerOutputs()?['body/id']",
+            "folderPath": "Received Reports"
+        },
+        "authentication": "@parameters('$authentication')"
+    },
+    "metadata": {
+        "Id::g8QExT5cSwDFkH9vRzA1mUNYi3JBoGVL4nIqCrdt62XWFMeakOy7zShTJuK0bQlwpRO85EfxgAvncUIjYtDsQ9BHZMrT17WKEvLFGNXJIu=": "Received Reports",
+        "operationMetadataId": "43ef9a1a-6692-4e9d-b5d3-9bd03e493830"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "inputs": {
+        "host": {
+            "connectionName": "shared_office365_2",
+            "operationId": "ReplyToV3",
+            "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+        },
+        "parameters": {
+            "messageId": "@triggerOutputs()?['body/id']",
+            "replyParameters/Body": "<p>Message ID:<br>\n<br>\n@{triggerOutputs()?['body/internetMessageId']}</p>",
+            "replyParameters/To": "internal.processing@example.com",
+            "replyParameters/Subject": "Report regarding Acct# @{variables('Account number')}"
+        },
+        "authentication": "@parameters('$authentication')"
+    },
+    "metadata": {
+        "operationMetadataId": "43ef9a1a-6692-4e9d-b5d3-9bd03e493830"
+    }
+}
